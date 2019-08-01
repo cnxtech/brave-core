@@ -34,6 +34,8 @@ class SoundCloud : public ledger::LedgerCallbackHandler {
       const std::map<std::string, std::string>& data,
       ledger::PublisherInfoCallback callback);
 
+  static std::string GetLinkType(const std::string& url);
+
   ~SoundCloud() override;
 
  private:

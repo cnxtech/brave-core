@@ -199,6 +199,9 @@ window.cr.define('brave_rewards', function () {
       getActions().getExternalWallet(properties.walletType)
     }
   }
+  function receiveClientMediaMessage(payload: string) {
+    console.log(payload)
+  }
 
   return {
     initialize,
@@ -235,7 +238,8 @@ window.cr.define('brave_rewards', function () {
     reconcileComplete,
     externalWallet,
     processRewardsPageUrl,
-    disconnectWallet
+    disconnectWallet,
+    receiveClientMediaMessage
   }
 })
 

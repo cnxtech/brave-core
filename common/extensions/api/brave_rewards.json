@@ -384,6 +384,17 @@
             }
           }
         ]
+      },
+      {
+        "name": "onSendClientMediaMessage",
+        "type": "function",
+        "description": "Fired when we recieve a message from the client for media",
+        "parameters": [
+          {
+            "name": "payload",
+            "type": "string"
+          }
+        ]
       }
     ],
     "functions": [

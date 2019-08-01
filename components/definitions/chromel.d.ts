@@ -89,6 +89,10 @@ declare namespace chrome.braveRewards {
   const onDisconnectWallet: {
     addListener: (callback: (properties: {result: number, walletType: string}) => void) => void
   }
+
+  const onSendClientMediaMessage: {
+    addListener: (callback: (payload: string) => void) => void
+  }
 }
 
 declare namespace chrome.rewardsNotifications {

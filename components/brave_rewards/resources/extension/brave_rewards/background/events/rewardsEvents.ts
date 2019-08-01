@@ -113,3 +113,7 @@ chrome.braveRewards.onDisconnectWallet.addListener((properties: {result: number,
     })
   }
 })
+
+chrome.braveRewards.onSendClientMediaMessage.addListener((payload: string) => {
+  console.log(payload)
+})

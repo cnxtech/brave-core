@@ -62,6 +62,8 @@ using GetGrantCaptchaCallback = std::function<void(const std::string&,
 using RewardsInternalsInfoCallback =
     std::function<void(ledger::RewardsInternalsInfoPtr)>;
 
+using SendClientMediaMessageCallback = std::function<void()>;
+
 class LEDGER_EXPORT Ledger {
  public:
   static bool IsMediaLink(const std::string& url,
@@ -294,6 +296,9 @@ class LEDGER_EXPORT Ledger {
   virtual void DisconnectWallet(
       const std::string& wallet_type,
       ledger::DisconnectWalletCallback callback) = 0;
+
+  virtual void SendClientMediaMessage(const std::string& payload,
+                              ledger::SendClientMediaMessageCallback) = 0;
 };
 
 }  // namespace ledger

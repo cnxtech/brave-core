@@ -31,6 +31,14 @@ SoundCloud::~SoundCloud() {
 }
 
 // static
+std::string SoundCloud::GetLinkType(const std::string& url) {
+  if (url.find("soundcloud.com/v1/events") != std::string::npos) {
+    return SOUNDCLOUD_MEDIA_TYPE;
+  }
+  return "";
+}
+
+// static
 std::string SoundCloud::GetUserJSON(const std::string& response) {
   std::string script_body = braveledger_media::ExtractData(
       response,

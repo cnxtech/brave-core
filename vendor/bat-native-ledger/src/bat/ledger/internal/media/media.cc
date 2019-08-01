@@ -42,7 +42,9 @@ std::string Media::GetLinkType(const std::string& url,
   if (type.empty()) {
     type = braveledger_media::Vimeo::GetLinkType(url);
   }
-
+  if (type.empty()) {
+    type = braveledger_media::SoundCloud::GetLinkType(url);
+  }
   return type;
 }
 

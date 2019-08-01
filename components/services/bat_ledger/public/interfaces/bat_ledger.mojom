@@ -199,6 +199,8 @@ interface BatLedgerClient {
       string content_type, int32 method) => (int32 status_code, string response,
         map<string, string> headers);
 
+  SendClientMediaMessage(string payload) => ();
+
   [Sync]
   SetTimer(uint64 time_offset) => (uint32 timer_id);
   KillTimer(uint32 timer_id);
