@@ -34,6 +34,7 @@
 #include "brave/components/brave_rewards/browser/rewards_notification_service.h"
 #include "brave/components/services/bat_ads/public/cpp/ads_client_mojo_bridge.h"
 #include "brave/components/services/bat_ads/public/interfaces/bat_ads.mojom.h"
+#include "brave/components/brave_ads/browser/notification_helper.h"
 #include "chrome/browser/browser_process.h"
 #include "chrome/browser/notifications/notification_display_service.h"
 #include "chrome/browser/notifications/notification_display_service_impl.h"
@@ -1200,7 +1201,7 @@ bool AdsServiceImpl::IsNotificationsAvailable() const {
 #if BUILDFLAG(ENABLE_NATIVE_NOTIFICATIONS)
   return NotificationHelper::GetInstance()->IsNotificationsAvailable();
 #else
-  return false;
+  return true;
 #endif
 }
 

@@ -201,7 +201,7 @@ void LoadUserModelForLocale(
 bool IsForeground() const
 ```
 
-`IsNotificationsAvailable` should return `true` if the operating system supports notifications otherwise returns `false`
+`IsNotificationsAvailable` should return `true` if notifications are enabled otherwise returns `false`
 ```
 bool IsNotificationsAvailable() const
 ```
