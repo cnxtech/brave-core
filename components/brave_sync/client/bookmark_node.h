@@ -12,7 +12,7 @@ namespace brave_sync {
 // Sync Managed PerrmanentNode
 class BraveBookmarkPermanentNode : public bookmarks::BookmarkPermanentNode {
  public:
-  explicit BraveBookmarkPermanentNode(int64_t id);
+  explicit BraveBookmarkPermanentNode(int64_t id, Type type);
   ~BraveBookmarkPermanentNode() override;
 
   void set_visible(bool value) { visible_ = value; }

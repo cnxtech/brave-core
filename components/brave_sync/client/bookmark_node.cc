@@ -2,8 +2,8 @@
 
 namespace brave_sync {
 
-BraveBookmarkPermanentNode::BraveBookmarkPermanentNode(int64_t id)
-    : bookmarks::BookmarkPermanentNode(id) {}
+BraveBookmarkPermanentNode::BraveBookmarkPermanentNode(int64_t id, Type type)
+    : bookmarks::BookmarkPermanentNode(id, type) {}
 
 BraveBookmarkPermanentNode::~BraveBookmarkPermanentNode() = default;
 
