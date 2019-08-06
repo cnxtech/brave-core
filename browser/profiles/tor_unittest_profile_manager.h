@@ -22,7 +22,7 @@ class TorUnittestProfileManager : public ProfileManagerWithoutInit {
   void InitProfileUserPrefs(Profile* profile) override;
 
  private:
-  Profile* CreateTorProfile(const base::FilePath& path, Delegate* delegate);
+  Profile* CreateProfile(const base::FilePath& path, Delegate* delegate);
 };
 
 #endif  // BRAVE_BROWSER_PROFILES_TOR_UNITTEST_PROFILE_MANAGER_H_
